@@ -7,13 +7,13 @@
     <meta name="description" content="A Mamma Mia! Movie Quiz Game" />
     <meta name="viewport" content="width=viewport-width;initial-scale=1" />
 
-    <link href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
     <header>
         <h1>What's the Name of the Game?</h1>
         <h2>A Mamma Mia! (2008) Quiz Game</h2>
-        <button id="restart" class="control" style="display:none;">Restart Game</button>
+        <button id="restart" class="control hidden">Restart Game</button>
     </header>
     <main>
         <div id="intro" class="container">
@@ -23,7 +23,7 @@
             <p>Once you're ready, hit the button below!</p>
             <button id="start" class="control" disabled="true">Play Now</button>
         </div>
-        <div id="question" class="container" style="display:none;">
+        <div id="question" class="container hidden">
             <h3 id="ask"></h3>
             <ul id="answer">
                 <li id="a" class="option"><strong>A: </strong><span id="answer-a"></span></li>
@@ -39,5 +39,5 @@
         <p>Game and website built by <a href="https://curiositybard.com" target="_blank">Briar Taggart</a></p>
         <p>I claim no ownership of Mamma Mia! (2008), this game is made in fun and appreciation of the film and music.</p>
     </footer>
-    <script type="text/javascript" src="/scripts/main.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
 </body>

@@ -2,17 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'client')));
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/index.html'));
+    res.sendFile('index.html');
 });
 
 app.get('/data', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/data.json'));
+    res.sendFile(data.json);
 });
-
-app.get('/scripts/main.js', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/scripts/main.js'));
-})
 
 app.listen(3000, () => {
     console.log('Server running on port 3000.');
