@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<header>
-    <title>What's the Name of the Game?</title>
+<head>
     <meta charset="UTF-8" />
+
+    <title>What's the Name of the Game?</title>
+    
     <meta name="description" content="A Mamma Mia! Movie Quiz Game" />
     <meta name="viewport" content="width=viewport-width;initial-scale=1" />
 
     <link href="./style.css">
-</header>
+</head>
 <body>
     <header>
         <h1>What's the Name of the Game?</h1>
@@ -19,7 +21,7 @@
             <p>Answer every question you can correctly. Once you get a question wrong, the game is over.</p>
             <p>If you're stuck, you can hit the SOS button to skip the question. Be careful! You only get to use this once.</p>
             <p>Once you're ready, hit the button below!</p>
-            <button id="start" class="control">Play Now</button>
+            <button id="start" class="control" disabled="true">Play Now</button>
         </div>
         <div id="question" class="container" style="display:none;">
             <h3 id="ask"></h3>
