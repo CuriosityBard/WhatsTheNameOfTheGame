@@ -15,6 +15,9 @@ const dom = {
 
     sos: document.querySelector('#sos'),
 
+    loseScreen: document.querySelector('#lose-screen'),
+    winScreen: document.querySelector('#win-screen'),
+
     possibleAnswers: [document.querySelector('#a'), document.querySelector('#b'), document.querySelector('#c'), document.querySelector('#d'), document.querySelector('#e')] // for loops later
 }
 // object to hold gameplay data
@@ -46,7 +49,6 @@ prepGame();
 
 // gameplay functions 
 function toggleGameElements() {
-    dom.startGameButton.classList.toggle('hidden');
     dom.restartGameButton.classList.toggle('hidden');
     dom.introContainer.classList.toggle('hidden');
     dom.questionContainer.classList.toggle('hidden');
@@ -60,11 +62,6 @@ function playRound() {
     }
 
     let questionNum;
-
-    if (game.usedQuestionIndices.length === questions.length) {
-        // if all the questions have been played, end the game 
-        gameOver();
-    }
 
     do {
         // generate a random question number until a new question is found
@@ -94,7 +91,13 @@ function playRound() {
 
 function winRound() {
     game.score++;
-    playRound();
+
+    if (game.usedQuestionIndices.length === questions.length) {
+        // if all the questions have been played, end the game 
+        gameOver();
+    } else {
+        playRound();
+    }
 }
 
 function loseRound() {
@@ -104,12 +107,21 @@ function loseRound() {
 
 function runSos() {
     game.sosUsed = true;
+    dom.sos.disabled = true;
     playRound();
 }
 
 function gameOver() {
     toggleGameElements();
-    console.log("end");
+    dom.introContainer.classList.toggle('hidden');      // re-toggle this, we just need win/loss screen and
+    dom.restartGameButton.classList.toggle('hidden');   // re-toggle this for replaying the game 
+
+    if (game.win) {
+        dom.winScreen.classList.toggle('hidden');
+    } else {
+        dom.loseScreen.classList.toggle('hidden');
+    }
+
 }
 
 function playGame() {
@@ -118,5 +130,9 @@ function playGame() {
 }
 
 function restartGame() {
-    toggleGameElements();
+    // just toggling won't work entirely, so let's be specific here 
+    dom.restartGameButton.classList.add('hidden');
+    dom.introContainer.classList.remove('hidden');
+    dom.winScreen.classList.add('hidden');
+    dom.loseScreen.classList.add('hidden');
 }
