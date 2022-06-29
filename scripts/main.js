@@ -18,6 +18,8 @@ const dom = {
     loseScreen: document.querySelector('#lose-screen'),
     winScreen: document.querySelector('#win-screen'),
 
+    score: document.querySelectorAll('.score'),
+
     possibleAnswers: [document.querySelector('#a'), document.querySelector('#b'), document.querySelector('#c'), document.querySelector('#d'), document.querySelector('#e')] // for loops later
 }
 // object to hold gameplay data
@@ -90,7 +92,11 @@ function playRound() {
 }
 
 function winRound() {
+    // increment score AND add to all 3 score sections of the DOM 
     game.score++;
+    for (element of dom.score) {
+        element.textContent = game.score;
+    }
 
     if (game.usedQuestionIndices.length === questions.length) {
         // if all the questions have been played, end the game 
