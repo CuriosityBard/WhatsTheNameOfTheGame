@@ -10,6 +10,61 @@
                 "Dancing Queen"
             ],
             "correct": 1
+        },
+        {
+            "question": "Which of the following songs is the first in the musical to be sung by Sophie?",
+            "answers": [
+                "Honey Honey",
+                "Super Trouper",
+                "Does Your Mother Know",
+                "I Have A Dream",
+                "Lay All Your Love On Me"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which of these characters from the film is played by Colin Firth?",
+            "answers": [
+                "Bill",
+                "Stavros",
+                "Harry",
+                "Sky",
+                "Sam"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which of the following is the last song played during the film's runtime?",
+            "answers": [
+                "Does Your Mother Know",
+                "Thank You For The Music",
+                "Waterloo",
+                "Take A Chance On Me",
+                "I Do, I Do, I Do, I Do, I Do"
+            ],
+            "correct": 1
+        }, 
+        {
+            "question": "What are the names of the three \"Pappas Pia\"?",
+            "answers": [
+                "Tom, Bill, and Sam",
+                "Bill, Harry, and Ian",
+                "Sky, Mark, and Harry",
+                "Sky, Tom, and Terry",
+                "Bill, Harry, and Sam"
+            ],
+            "correct": 4
+        }, 
+        {
+            "question": "In what country is the film set?",
+            "answers": [
+                "Greece", 
+                "Italy",
+                "Turkey",
+                "Spain",
+                "Egypt"
+            ],
+            "correct": 0
         }
     ]
 }
