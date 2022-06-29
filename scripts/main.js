@@ -152,6 +152,11 @@ function restartGame() {
     dom.winScreen.classList.add('hidden');
     dom.loseScreen.classList.add('hidden');
 
+    // reset sos
+    dom.sos.disabled = false;
+    // reset question tracker 
+    game.usedQuestionIndices = [];
+
     // clear the score and reset to zero 
     game.score = 0;
     for (element of dom.score) {
