@@ -29,7 +29,7 @@ const game = {
 // once the data is retrieved, the player may begin the game.
 let questions;
 function prepGame() {
-    fetch('http://localhost:3000/data')
+    fetch('https://curiositybard.github.io/WhatsTheNameOfTheGame/data.json')
         .then(res => res.json())
         .then(data => {
             questions = data.questions;
