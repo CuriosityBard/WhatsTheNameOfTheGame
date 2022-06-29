@@ -91,6 +91,15 @@ function playRound() {
     game.usedQuestionIndices.push(questionNum);
 }
 
+function checkQuestions() {
+    if (game.usedQuestionIndices.length === questions.length) {
+        // if all the questions have been played, end the game 
+        gameOver();
+    } else {
+        playRound();
+    }
+}
+
 function winRound() {
     // increment score AND add to all 3 score sections of the DOM 
     game.score++;
@@ -98,12 +107,7 @@ function winRound() {
         element.textContent = game.score;
     }
 
-    if (game.usedQuestionIndices.length === questions.length) {
-        // if all the questions have been played, end the game 
-        gameOver();
-    } else {
-        playRound();
-    }
+    checkQuestions();
 }
 
 function loseRound() {
@@ -114,7 +118,7 @@ function loseRound() {
 function runSos() {
     game.sosUsed = true;
     dom.sos.disabled = true;
-    playRound();
+    checkQuestions();
 }
 
 function gameOver() {
