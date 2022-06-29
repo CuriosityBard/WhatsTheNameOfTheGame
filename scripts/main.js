@@ -132,13 +132,25 @@ function gameOver() {
 
 function playGame() {
     toggleGameElements();
+
+    // get score to 0 on screen:
+    game.score = 0;
+    for (element of dom.score) {
+        element.textContent = game.score;
+    }
+
     playRound();
 }
 
 function restartGame() {
     // just toggling won't work entirely, so let's be specific here 
-    dom.restartGameButton.classList.add('hidden');
-    dom.introContainer.classList.remove('hidden');
+    dom.questionContainer.classList.remove('hidden');
     dom.winScreen.classList.add('hidden');
     dom.loseScreen.classList.add('hidden');
+
+    // clear the score and reset to zero 
+    game.score = 0;
+    for (element of dom.score) {
+        element.textContent = game.score;
+    }
 }
