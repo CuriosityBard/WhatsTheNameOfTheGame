@@ -1,52 +1,54 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8" />
-
-    <title>What's the Name of the Game?</title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
     
-    <meta name="description" content="A Mamma Mia! Movie Quiz Game" />
-    <meta name="viewport" content="width=viewport-width;initial-scale=1" />
-
-    <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body>
-    <header>
-        <h1>What's the Name of the Game?</h1>
-        <h2>A Mamma Mia! (2008) Quiz Game</h2>
-        <button id="restart" class="control hidden">Restart Game</button>
-    </header>
-    <main>
-        <div id="intro" class="container">
-            <h3>How to Play</h3>
-            <p>Answer every question you can correctly. Once you get a question wrong, the game is over.</p>
-            <p>If you're stuck, you can hit the SOS button to skip the question. Be careful! You only get to use this once.</p>
-            <p>Once you're ready, hit the button below!</p>
-            <button id="start" class="control" disabled="true">Play Now</button>
-        </div>
-        <div id="question" class="container hidden">
-            <h4>Score: <strong id="game-score" class="score"></strong></h4>
-            <h3 id="ask"></h3>
-            <ul id="answer">
-                <li id="a" class="option"><strong>A: </strong><span id="answer-a"></span></li>
-                <li id="b" class="option"><strong>B: </strong><span id="answer-b"></span></li>
-                <li id="c" class="option"><strong>C: </strong><span id="answer-c"></span></li>
-                <li id="d" class="option"><strong>D: </strong><span id="answer-d"></span></li>
-                <li id="e" class="option"><strong>E: </strong><span id="answer-e"></span></li>
-            </ul>
-            <button id="sos" class="control">SOS!</button>
-        </div>
-        <div id="win-screen" class="container hidden">
-            <h3 id="win">The Winner Takes It All!</h3>
-            <h4>Score: <strong id="win-score" class="score"></strong></h4>
-        </div>
-        <div id="lose-screen" class="container hidden">
-            <h3 id="lose">Maybe next time those Super Trouper lights are gonna find you.</h3>
-            <h4>Score: <strong id="lose-score" class="score"></strong></h4>
-        </div>
-    </main>
-    <footer>
-        <p>Game and website built by <a href="https://curiositybard.com" target="_blank">Briar Taggart</a></p>
-        <p>I claim no ownership of Mamma Mia! (2008), this game is made in fun and appreciation of the film and music.</p>
-    </footer>
-    <script type="text/javascript" src="./scripts/main.js"></script>
-</body>
+        <title>What's the Name of the Game?</title>
+        
+        <meta name="description" content="A Mamma Mia! Movie Quiz Game" />
+        <meta name="viewport" content="width=viewport-width;initial-scale=1" />
+    
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <header>
+            <h1>What's the Name of the Game?</h1>
+            <h2>A Mamma Mia! (2008) Quiz Game</h2>
+            <button id="restart" class="control hidden">Restart Game</button>
+        </header>
+        <main>
+            <div id="intro" class="container">
+                <h3>How to Play</h3>
+                <p>Answer every question you can correctly. Once you get a question wrong, the game is over.</p>
+                <p>If you're stuck, you can hit the SOS button to skip the question. Be careful! You only get to use this once.</p>
+                <p>Once you're ready, hit the button below!</p>
+                <button id="start" class="control" disabled="true">Play Now</button>
+            </div>
+            <div id="question" class="container hidden">
+                <h4>Score: <strong id="game-score" class="score"></strong></h4>
+                <h3 id="ask"></h3>
+                <ul id="answer">
+                    <li id="a" class="option"><strong>A: </strong><span id="answer-a"></span></li>
+                    <li id="b" class="option"><strong>B: </strong><span id="answer-b"></span></li>
+                    <li id="c" class="option"><strong>C: </strong><span id="answer-c"></span></li>
+                    <li id="d" class="option"><strong>D: </strong><span id="answer-d"></span></li>
+                    <li id="e" class="option"><strong>E: </strong><span id="answer-e"></span></li>
+                </ul>
+                <button id="sos" class="control">SOS!</button>
+            </div>
+            <div id="win-screen" class="container hidden">
+                <h3 id="win">The Winner Takes It All!</h3>
+                <h4>Score: <strong id="win-score" class="score"></strong></h4>
+            </div>
+            <div id="lose-screen" class="container hidden">
+                <h3 id="lose">Maybe next time those Super Trouper lights are gonna find you.</h3>
+                <h4>Score: <strong id="lose-score" class="score"></strong></h4>
+            </div>
+        </main>
+        <footer>
+            <p>Game and website built by <a href="https://curiositybard.com" target="_blank">Briar Taggart</a></p>
+            <p>I claim no ownership of Mamma Mia! (2008), this game is made in fun and appreciation of the film and music.</p>
+        </footer>
+        <script type="text/javascript" src="./scripts/main.js"></script>
+    </body>
+</html>
