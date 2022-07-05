@@ -148,7 +148,9 @@ function playGame() {
 
 function restartGame() {
     // just toggling won't work entirely, so let's be specific here 
-    dom.questionContainer.classList.remove('hidden');
+    dom.questionContainer.classList.add('hidden');
+    dom.introContainer.classList.remove('hidden');
+    dom.restartGameButton.classList.add('hidden');
     dom.winScreen.classList.add('hidden');
     dom.loseScreen.classList.add('hidden');
 
