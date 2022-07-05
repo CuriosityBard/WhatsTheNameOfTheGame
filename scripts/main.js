@@ -156,6 +156,7 @@ function restartGame() {
 
     // reset sos
     dom.sos.disabled = false;
+    game.sosUsed = false;
     // reset question tracker 
     game.usedQuestionIndices = [];
 
