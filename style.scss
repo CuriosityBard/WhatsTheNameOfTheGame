@@ -1,3 +1,87 @@
+$font: 'Lora', serif;
+$title-font: 'Old Standard TT', serif;
+
+@mixin title-font($size) {
+    font-family: $title-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: $size;
+    color: $title-text;
+}
+
+// colors
+$background: #a3f0fd;
+$title-text: #0201b8;
+$text: #302b56;
+
+$bg-gradient: linear-gradient($background, #e8e9ed);
+
+html {
+    height: 100vh;
+
+    background-color: $background;
+    background: $bg-gradient;
+
+    color: $text;
+    font-family: $font;
+    font-size: 1.2em;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    font-size: 0.8em;
+    text-align: center;
+}
+
+h1 {
+    @include title-font(3em);
+    text-decoration: underline;
+}
+h2 {
+    @include title-font(1.8em);
+    font-style: italic;
+}
+h3 {
+    @include title-font(1.5em);
+}
+
+button {
+    background-color: $background;
+    border: solid 2px $title-text;
+    border-radius: 6px;
+    outline: solid 1px white;
+
+    font-size: 1.2em;
+    font-family: $title-font;
+    text-transform: uppercase;
+    color: $title-text;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+}
+li {
+    padding: 1em;
+    margin: 0.3em;
+
+    border: solid 2px $title-text;
+}
+
+strong {
+    color: $title-text;
+}
+
 .hidden {
     display: none;
 }

@@ -1,3 +1,92 @@
+html {
+  height: 100vh;
+  background-color: #a3f0fd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3f0fd), to(#e8e9ed));
+  background: linear-gradient(#a3f0fd, #e8e9ed);
+  color: #302b56;
+  font-family: "Lora", serif;
+  font-size: 1.2em;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #0201b8;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  color: #0201b8;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #0201b8;
+}
+
+button {
+  background-color: #a3f0fd;
+  border: solid 2px #0201b8;
+  border-radius: 6px;
+  outline: solid 1px white;
+  font-size: 1.2em;
+  font-family: "Old Standard TT", serif;
+  text-transform: uppercase;
+  color: #0201b8;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+li {
+  padding: 1em;
+  margin: 0.3em;
+  border: solid 2px #0201b8;
+}
+
+strong {
+  color: #0201b8;
+}
+
 .hidden {
   display: none;
 }
