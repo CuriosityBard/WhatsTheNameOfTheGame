@@ -7,17 +7,24 @@ $title-font: 'Old Standard TT', serif;
     text-transform: uppercase;
     font-size: $size;
     color: $title-text;
+    text-align: center;
+}
+@mixin center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 // colors
 $background: #a3f0fd;
+$lt-bg: #e8e9ed;
 $title-text: #0201b8;
 $text: #302b56;
 
-$bg-gradient: linear-gradient($background, #e8e9ed);
+$bg-gradient: linear-gradient($background, $lt-bg);
 
 html {
-    height: 100vh;
+    min-height: 100vh;
 
     background-color: $background;
     background: $bg-gradient;
@@ -27,14 +34,19 @@ html {
     font-size: 1.2em;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include center-flex;
+    min-height: 95vh;
 }
 
+header {
+    @include center-flex;
+}
+main {
+    width: 75%;
+}
 footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+    justify-self: end;
 
     font-size: 0.8em;
     text-align: center;
@@ -42,10 +54,10 @@ footer {
 
 h1 {
     @include title-font(3em);
-    text-decoration: underline;
+    margin-bottom: 0.3em;
 }
 h2 {
-    @include title-font(1.8em);
+    @include title-font(1.1em);
     font-style: italic;
 }
 h3 {
@@ -53,6 +65,9 @@ h3 {
 }
 
 button {
+    margin: 0.7em auto; 
+    padding: 0.3em 0.5em;
+
     background-color: $background;
     border: solid 2px $title-text;
     border-radius: 6px;
@@ -65,21 +80,33 @@ button {
     font-weight: 500;
 }
 
+p {
+    margin: 0.2em 0;
+}
+
 ul {
     list-style: none;
 
     display: flex;
     flex-direction: column;
+
+    width: 80%;
 }
 li {
     padding: 1em;
     margin: 0.3em;
 
     border: solid 2px $title-text;
+
+    background-color: lighten($background, 10%);
 }
 
 strong {
     color: $title-text;
+}
+
+.container {
+    @include center-flex;
 }
 
 .hidden {

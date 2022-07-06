@@ -1,5 +1,5 @@
 html {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #a3f0fd;
   background: -webkit-gradient(linear, left top, left bottom, from(#a3f0fd), to(#e8e9ed));
   background: linear-gradient(#a3f0fd, #e8e9ed);
@@ -19,11 +19,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 95vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  width: 75%;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+  -ms-grid-column-align: end;
+      justify-self: end;
   font-size: 0.8em;
   text-align: center;
 }
@@ -34,15 +53,17 @@ h1 {
   text-transform: uppercase;
   font-size: 3em;
   color: #0201b8;
-  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 0.3em;
 }
 
 h2 {
   font-family: "Old Standard TT", serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 1.8em;
+  font-size: 1.1em;
   color: #0201b8;
+  text-align: center;
   font-style: italic;
 }
 
@@ -52,9 +73,12 @@ h3 {
   text-transform: uppercase;
   font-size: 1.5em;
   color: #0201b8;
+  text-align: center;
 }
 
 button {
+  margin: 0.7em auto;
+  padding: 0.3em 0.5em;
   background-color: #a3f0fd;
   border: solid 2px #0201b8;
   border-radius: 6px;
@@ -66,6 +90,10 @@ button {
   font-weight: 500;
 }
 
+p {
+  margin: 0.2em 0;
+}
+
 ul {
   list-style: none;
   display: -webkit-box;
@@ -75,16 +103,31 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
 }
 
 li {
   padding: 1em;
   margin: 0.3em;
   border: solid 2px #0201b8;
+  background-color: #d5f8fe;
 }
 
 strong {
   color: #0201b8;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hidden {
